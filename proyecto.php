@@ -24,16 +24,22 @@ $dia= $_POST["Dia"];
 
 echo '<link rel="stylesheet" href="estilos.css" type="text/css">';
 $fichero = fopen("D:\\xampp\\apache\\logs\\error.log", "r");
+$contador = false;
  echo "<center><textarea>";
  while (!feof($fichero)){
      $linea = fgets($fichero);
      $buscar = strpos($linea,$mes." ".$dia);
   if($buscar !== false){
 
-    echo $linea."<br>";
+    echo $linea;
+    $contador=true;
 
   }
  }
+if  (!$contador){
+  echo "NO HAY LOGS!";
+}
+
  fclose($fichero);
  echo "</textarea></center>"; 
 
