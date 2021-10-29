@@ -33,6 +33,9 @@ $fichero = fopen("D:\\xampp\\apache\\logs\\error.log", "r");
     echo $linea."<br>";
 
   }
+  else{
+    echo "No hay logs para ese día";
+  }
  }
  fclose($fichero);
  echo "</textarea></center>"; 
