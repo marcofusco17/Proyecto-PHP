@@ -23,7 +23,7 @@ $dia= $_POST["Dia"];
 
 
 echo '<link rel="stylesheet" href="estilos.css" type="text/css">';
-$fichero = fopen("D:\\xampp\\apache\\logs\\error.log", "r");
+$fichero = fopen("C:\\xampp\\apache\\logs\\error.log", "r");
  echo "<center><textarea>";
  while (!feof($fichero)){
      $linea = fgets($fichero);
